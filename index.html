@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randome Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class='container'>
+<!--     <div>Panimalar INtro</div> -->
+    <div class="generator">
+	<h1>Random Password Generator</h1>
+  <h2>Radio Button Type</h2>
+      <ul>Instruction
+      <li>Type The Length Of The Password in Number Box</li>
+      <li>You Can Select Only One of this Type of Password</li>
+      <li>Make Sure To Note Your Generated Password</li>
+      <li>Each Generated Password Only Visible upto 120 seconds</li>
+      <li>Do Not Share Your Password To Anyone</li></ul>
+      <span>Type The Length of The Password</span><br>
+      <input type="number" name='length' value=8><br>
+      <span>Select The Type of Password</span><br><br>
+      <input type="radio" value='1' name='pass'><span>Alphabets</span><br>
+      <input type="radio" value='2' name='pass'><span>Numbers</span><br>
+      <input type="radio" value='3' name='pass'><span>Symbols</span><br>
+      <input type="radio" value='4' name='pass'><span>Alphanumberic</span><br>
+      <input type="radio" value='5' name='pass'><span>Alphabets & Symbols</span><br>
+      <input type="radio" value='6' name='pass'><span>Numbers & Symbols</span><br>
+      <input type="radio" value='7' name='pass'><span>Alphanumeric & Symbols</span><br>
+      
+      <button onclick='GeneratePassword()'>Generate Password</button>
+      <h3>Your Password:</h3>
+      <h3 id='result'>Password</h3>
+      <button onclick="copyToClipboard('#result')">Copy Password</button>
+    </div>
+    <!-- checkbox RPG -->
+    <div class="checkbox">
+      <h1>Random Password Generator)</h1>
+      <h2>Check-Box Type</h2>
+      <ul>Instruction
+        <li>Type The Length Of The Password in Number Box</li>
+        <li>You Can Select Any of this Type of Password</li>
+        <li>Make Sure To Note Your Generated Password</li>
+        <li>Each Generated Password Only Visible upto 120 seconds</li>
+        <li>Do Not Share Your Password To Anyone</li></ul>
+      <span>Type The Length of The Password</span><br>
+      <input type="number" name='length' value=8><br>
+      <span>Select The Type of Password options</span><br><br>
+      <input type="checkbox" name="check" value="1" id='value1'><span>Alphabets</span><br>
+      <input type="checkbox" name="check" value="2" id='value2'><span>Numbers</span><br>
+      <input type="checkbox" name="check" value="3" id='value3'><span>Symbols</span><br>
+      <button onclick="PasswordGenerate()">Generate Password</button>
+      <h3>Your Password</h3>
+      <h3 id="boxResult">Password</h3>
+      <button onclick="copyToClipboard('#boxResult')">Copy Password</button>
+    </div> 
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
